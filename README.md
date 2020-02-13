@@ -28,10 +28,12 @@ Training and Validation set: The data in the training dataset is not manually di
 A generic function is written which will be called by each algorithm for training and validating.For each model the ROC score is calculated for each validation split.
 This ROC score is used to select the best fit model!The scores are as follows:
 
-First Header | Second Header
+Algorithm | ROC Score
 ------------ | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
+Logistic Regression | 0.6955
+Support Vector Classifier | 0.6757
+Gradient Boosting Classifier | 0.5878
+Random Forest Classifier | 0.5813
 
 This method involves extracting the featured from the dataset which contains the most discrimatory infromation of the dataset.So the best curve is fitted on the subset of the dataset and not on the original dataset.Using the following methods we will be modeling on the dataset containing the reduced number of features and not on all the 300 features.We have already implemented this on Lasso tool,Extra Tree classifier and Random Tree classifier in this Notebook.
 
