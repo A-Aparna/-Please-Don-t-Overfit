@@ -5,7 +5,8 @@ One of the forefront challenges in any machine learning project is smaller datas
 Smaller datasets for training leads to higher bias or ***overfitting***.
 The main agenda of this notebook is to use different types of Algorithms to do ***feature extraction*** in order avoid overfitting of the data.
 ### List of files in the repository
-1. Please! Dont Oerfit.ipynb - The Jupiyter notebook with all the preprocessing ang modeling o the data
+1. Please! Dont Oerfit.ipynb - The Jupiyter notebook with all the preprocessing and modeling of the data
+![Link Here](https://github.com/A-Aparna/Please-Don-t-Overfit/blob/master/please!%20dont%20overfit.ipynb)
 2. Train.csv - The input dataset of 250 rows.
 ## About the Data
 The dataset used in this notebook is taken from the Kaggle dataset.The training data comprises of only **250 examples** with whooping **300 features**.The **label/output** is a binary classifiaction with either a value of **0 or 1**.Neither the input nor the output has index or column names and makes absolutely no sense.The dataset has no null values in any feature/row.
