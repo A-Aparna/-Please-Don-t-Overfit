@@ -1,4 +1,3 @@
-# Please-Don-t-Overfit
 # Please! Don't Overfit
 ## Introduction
 ### Modeling Smaller datasets <br>
@@ -16,7 +15,7 @@ Before building my predictive models, I undertook exploratory data analysis to s
 ![EDA1](https://github.com/A-Aparna/Please-Don-t-Overfit/blob/master/Images/EDA_label.jpg)<br>
 We can see that the distribution of the labels is skewed to some extent and we need to take precautions while training the data.
 ### 2. correlation between the different features
-![EDA12](https://github.com/A-Aparna/Please-Don-t-Overfit/blob/master/Images/EDA_correlation.jpg) <br>
+![EDA2](https://github.com/A-Aparna/Please-Don-t-Overfit/blob/master/Images/EDA_correlation.jpg) <br>
 As expected there is no visible patter we can see and the correlation matrix looks like a crazy puzzle without any obvious recognizable pattern.
 ## Modeling
 Standardizing the data In the following step the data is standardized by using the SKLearn libraries.In standardization,we standardize the scale for each variable so that we can compare it on the same scale.
@@ -34,7 +33,13 @@ Logistic Regression | 0.6955
 Support Vector Classifier | 0.6757
 Gradient Boosting Classifier | 0.5878
 Random Forest Classifier | 0.5813
+Lasso Regularization | 0.7781
 
-This method involves extracting the featured from the dataset which contains the most discrimatory infromation of the dataset.So the best curve is fitted on the subset of the dataset and not on the original dataset.Using the following methods we will be modeling on the dataset containing the reduced number of features and not on all the 300 features.We have already implemented this on Lasso tool,Extra Tree classifier and Random Tree classifier in this Notebook.
+## Feature Extraction
+This method involves extracting the features from the dataset which contains the most discrimatory infromation of the dataset.So the best curve is fitted on the subset of the dataset and not on the original dataset.Using the following methods we will be modeling on the dataset containing the reduced number of features and not on all the 300 features.<br>
+Using Lasso model with feature extraction reduced the features from 300 to 140.When the subset dataset is fit with lasso regularization model the ROC score shot to 0.9042.<br>
+Summary in a box plot:
+![OP1](https://github.com/A-Aparna/Please-Don-t-Overfit/blob/master/Images/ROCScore_boxplot.jpg) <br>
 
-##Feature Extraction
+# Summary
+The data set is modeled using techniques namely-***Logistic Regression, Supoort Vector,Gradient Boosting, Random Forest***.Because of the nature of the data there is overfitting.When a ***L1 regularization*** is applied the perfomance improved to***78% ROC score***.As expected the Lasso tool lived upto its name by internally assigning the zero weights to the features which are leading to overfitting of the data.Input dataset is reduced to (250,140) from (250,300) i.e. from 300 features Lasso has discarded 160 features by assigining them a weight of zero.The ROC score improved from 0.77 to 0.9
